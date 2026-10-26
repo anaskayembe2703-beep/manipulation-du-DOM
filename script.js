@@ -27,10 +27,14 @@ form.addEventListener("submit", function (event) {
 
     const btnSupprimer = li.querySelector(".btn-supprimer");
     btnSupprimer.addEventListener("click", function() {
-        li.remove()
+        li.remove();
+        majCompteur();
+
     });
 
     liste.append(li);
+    majCompteur();
+
     input.value = "";
     input.focus();
     
