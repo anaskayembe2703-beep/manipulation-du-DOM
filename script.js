@@ -10,6 +10,10 @@ const compteur = document.querySelector("#nb-taches");
 
 const btnVider = document.querySelector("#btn-vider-terminees");
 
+function majCompteur() {
+  compteur.textContent = liste.children.length;
+}
+
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -33,4 +37,5 @@ form.addEventListener("submit", function (event) {
 });
 btnVider.addEventListener("click", function () {
   liste.innerHTML = "";
+  majCompteur(); 
 });
