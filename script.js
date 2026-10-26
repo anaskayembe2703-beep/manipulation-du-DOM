@@ -25,9 +25,12 @@ form.addEventListener("submit", function (event) {
     btnSupprimer.addEventListener("click", function() {
         li.remove()
     });
-      
+
     liste.append(li);
     input.value = "";
     input.focus();
     
+});
+btnVider.addEventListener("click", function () {
+  liste.innerHTML = "";
 });
