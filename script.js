@@ -20,6 +20,12 @@ form.addEventListener("submit", function (event) {
     const li = template.content.firstElementChild.cloneNode(true);
     const spanTexte = li.querySelector(".tache-texte");
     spanTexte.textContent = texte;
+
+    const btnSupprimer = li.querySelector(".btn-supprimer");
+    btnSupprimer.addEventListener("click", function() {
+        li.remove()
+    });
+      
     liste.append(li);
     input.value = "";
     input.focus();
